@@ -1,17 +1,24 @@
 Write a function that takes in a sorted array of integers and a target integer. 
 The function should use the binary search to find the number.
 
-function binarySearch(array,target){
+function binarySearch(array,target)
+{
   let left = 0
   let right = array.length - 1
-  while(left <= right){
+  while(left <= right)
+  {
     let midIdx = Math.floor((left + right) / 2)
     let midValue = array[midIdx]
-    if(midValue === target){
+    if(midValue === target)
+    {
       return midIdx
-    }else if(target < midValue){
+    }
+    else if(target < midValue)
+    {
       right = midIdx - 1
-    }else {
+    }
+    else
+    {
       left = midIdx + 1
     }
   }
@@ -22,14 +29,20 @@ left = 0 // Starting idx
 right = array.length - 1
 Time --> O(log(n))
 Space --> O(1)
-while(left <= right) {
+while(left <= right)
+{
   let mid = Math.floor((left + right) / 2)
   let midValue = array[mid]
-  if(midValue === target){
+  if(midValue === target)
+  {
     return mid
-  }else if(target < midValue) {
+  }
+  else if(target < midValue)
+  {
     right = mid - 1 
-  }else {
+  }
+  else
+  {
     left = mid + 1
   }
 }
